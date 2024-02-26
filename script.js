@@ -5,14 +5,14 @@ const nodemailer = require('nodemailer');
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'your-email@gmail.com', // Your email
-        pass: 'your-password' // Your password
+        user: 'HappyBirthdaybyDps@gmail.com', // Your email
+        pass: 'birthaybydps' // Your password
     }
 });
 
 // Sample student data (you would fetch this from a database)
 const students = [
-    { name: 'Parth Dube', email: 'parth.dube@dpsnashik.i.', birthday: '2024-02-26' },
+    { name: 'Parth Dube', email: 'parth.dube@dpsnashik.in', birthday: '2024-02-26' },
     { name: 'Jane Smith', email: 'jane@example.com', birthday: '1999-08-15' }
     // Add more student data as needed
 ];
