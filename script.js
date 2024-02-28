@@ -33,7 +33,7 @@ if (studentsWithBirthday.length > 0) {
         const message = `Dear ${student.name},\n\nHappy Birthday! We hope you have a fantastic day!\n\nBest regards,\nYour School`;
 
         // Send email using fetch API
-        fetch('https://movers-san-francisco.com/email_sender.php', {
+        fetch('', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
