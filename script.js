@@ -5,6 +5,14 @@ const students = [
     // Add more students as needed
 ];
 
+// Function to log recipients
+function logRecipients(recipients) {
+    console.log("Emails sent to:");
+    recipients.forEach(recipient => {
+        console.log(recipient);
+    });
+}
+
 // Get today's date in dd/mm format
 const today = new Date();
 const dd = String(today.getDate()).padStart(2, '0');
@@ -13,6 +21,9 @@ const currentDate = dd + '/' + mm;
 
 // Find students whose birthday matches today's date
 const studentsWithBirthday = students.filter(student => student.birthday === currentDate);
+
+// Array to store recipients
+const recipients = [];
 
 // If there are students with birthdays today, send them emails
 if (studentsWithBirthday.length > 0) {
@@ -36,9 +47,13 @@ if (studentsWithBirthday.length > 0) {
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            recipients.push(email_to); // Add recipient to the list
         })
         .catch(error => {
             console.error('Error:', error);
         });
     });
+
+    // Log recipients after emails are sent
+    logRecipients(recipients);
 }
