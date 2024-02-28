@@ -1,6 +1,6 @@
 // List of students with birthdays in dd/mm format
 const students = [
-    { name: "Student 1", email: "parth.dube@dpsnashik.in", birthday: "28/02" },
+    { name: "Student 1", email: "", birthday: "28/02" },
     { name: "Student 2", email: "student2@example.com", birthday: "15/06" },
     // Add more students as needed
 ];
